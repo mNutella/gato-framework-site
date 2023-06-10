@@ -40,7 +40,7 @@ export default function MainList({
               <h2 className="text-2xl md:text-3xl font-medium">{item.title}</h2>
               <p className="text-lg text-neutral-300">{item.description}</p>
               <Link href={item.href} className="link">
-                Links -&gt;
+                Read more -&gt;
               </Link>
             </div>
             <div
