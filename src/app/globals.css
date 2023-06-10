@@ -3,25 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-neutral-200 bg-neutral-950 overflow-x-hidden;
+}
+
+.btn-base {
+  @apply text-center px-6 py-3 md:text-lg rounded-xl w-fit transition-colors;
+}
+
+.btn-primary {
+  @apply btn-base bg-yellow-400 text-neutral-950 border border-transparent hover:bg-transparent hover:border-yellow-400 hover:text-neutral-200;
+}
+
+.btn-primary-outlined {
+  @apply btn-base text-neutral-200 border border-yellow-400 hover:bg-yellow-400 hover:border-transparent hover:text-neutral-950;
+}
+
+.link {
+  @apply md:text-lg text-blue-400 underline underline-offset-4 transition-all hover:underline-offset-8 hover:text-blue-300;
 }
