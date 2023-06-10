@@ -11,7 +11,7 @@ import { NEWS, GLOBAL_COOPERATION, GATO_LAYERS } from "@/lib/data/home";
 export default function Home() {
   return (
     <>
-      <header className="bg-neutral-900 border border-neutral-800 rounded-[32px] p-3">
+      <section className="bg-neutral-900 border border-neutral-800 rounded-[32px] p-3">
         <div className="flex flex-col md:flex-row p-3 md:p-16 space-y-6 space-y-reverse md:space-y-0 md:space-x-6">
           <div className="space-y-6 flex flex-col justify-center md:w-1/2 order-2 md:order-1">
             <div className="space-y-2">
@@ -72,7 +72,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </header>
+      </section>
 
       <HorizontalList
         title="Global Cooperation on AI Safety"
