@@ -20,10 +20,10 @@ export default function MainList({
   items: Item[];
 }) {
   return (
-    <section className="flex flex-col gap-8 p-3 py-8 md:gap-16 md:pt-16 md:pb-0">
+    <section className="flex flex-col gap-8 py-8 md:gap-16 md:pt-16 md:pb-0">
       <div className="space-y-3">
         <h1 className="text-3xl md:text-6xl">{title}</h1>
-        <p className="text-lg text-neutral-300 md:max-w-xl">{description}</p>
+        <p className="text-lg font-light text-neutral-300 md:max-w-xl">{description}</p>
       </div>
       <article className="relative">
         {items.map((item, index) => (
@@ -37,8 +37,8 @@ export default function MainList({
                 index % 2 === 0 ? "md:order-1" : "md:order-2"
               )}
             >
-              <h2 className="text-2xl md:text-3xl font-medium">{item.title}</h2>
-              <p className="text-lg text-neutral-300">{item.description}</p>
+              <h2 className="text-2xl md:text-3xl">{item.title}</h2>
+              <p className="text-lg font-light text-neutral-300">{item.description}</p>
               <Link href={item.href} className="link">
                 Read more -&gt;
               </Link>

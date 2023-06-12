@@ -10,7 +10,7 @@ body {
 }
 
 .btn-base {
-  @apply text-center px-6 py-3 md:text-lg rounded-xl w-fit transition-colors;
+  @apply text-center px-6 py-3 md:text-lg rounded-xl transition-colors w-full sm:w-fit;
 }
 
 .btn-primary {
