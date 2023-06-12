@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { clsx } from "clsx";
 import { useMediaQuery } from "react-responsive";
 
@@ -41,9 +42,11 @@ export default function Nav({ items }: { items: NavGroup[] }) {
             : "border-transparent"
         )}
       >
-        <div>
-          <span className="block text-xl">GATO</span>
-          <span className="block -mt-2 ml-5">Framework</span>
+        <div className="z-0">
+          <Link href="/">
+            <span className="block text-xl">GATO</span>
+            <span className="block -mt-2 ml-5">Framework</span>
+          </Link>
         </div>
 
         {!isTabletOrMobile && (

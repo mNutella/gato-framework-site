@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <section className="bg-neutral-900 border border-neutral-800 rounded-[32px]">
-        <div className="flex flex-col md:flex-row p-3 md:p-16 space-y-6 space-y-reverse md:space-y-0 md:space-x-6">
+        <div className="flex flex-col md:flex-row p-6 md:p-16 space-y-6 space-y-reverse md:space-y-0 md:space-x-6">
           <div className="space-y-6 flex flex-col justify-center md:w-1/2 order-2 md:order-1">
             <div className="space-y-2">
               <span className="text-xl font-light text-neutral-400">
@@ -46,7 +46,7 @@ export default function Home() {
         <div className="bg-neutral-800 h-[2px]" />
 
         {/* Latest News */}
-        <div className="space-y-6 p-3 md:p-6">
+        <div className="space-y-6 p-6">
           <h2 className="text-2xl lg:text-3xl font-light">Latest News</h2>
           <div className="flex flex-col gap-6 lg:grid lg:grid-cols-4">
             {NEWS.map((item) => (
