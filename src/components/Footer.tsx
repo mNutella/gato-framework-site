@@ -4,7 +4,7 @@ import { NavGroup } from "@/lib/types";
 
 export default function Footer({ items }: { items: NavGroup[] }) {
   return (
-    <footer className="max-w-screen-2xl mx-auto p-6">
+    <footer className="max-w-screen-2xl mx-auto px-6 pb-6 pt-16 md:pt-32">
       <div className="bg-neutral-900 flex flex-col space-y-6 border border-neutral-800 rounded-[32px] p-6 md:space-y-0 md:grid md:grid-rows-1 md:grid-cols-3">
         {items.map((item) => (
           <div
