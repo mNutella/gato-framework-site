@@ -1,26 +1,38 @@
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 type Item = {
   id: number;
   title: string;
   description: string;
-  hrefText: string;
-  href: string;
+  hrefText?: string;
+  href?: string;
 };
 
 export default function NumberedList({
   title,
+  description,
   items,
+  className,
 }: {
   title: string;
+  description: string;
   items: Item[];
+  className?: string;
 }) {
   return (
     <section
       id="get-involved"
-      className="space-y-8 pt-16 md:space-y-16 md:pt-32"
+      className={twMerge("space-y-8 md:space-y-16", className)}
     >
-      <h1 className="text-3xl md:text-6xl">{title}</h1>
+      <div className="space-y-3">
+        <h1 className="text-3xl md:text-6xl">{title}</h1>
+        {description && (
+          <p className="text-lg font-light text-neutral-300 md:max-w-xl">
+            {description}
+          </p>
+        )}
+      </div>
       <article className="flex flex-col gap-6 md:grid md:grid-cols-2">
         {items.map((item, index) => (
           <article
@@ -36,7 +48,7 @@ export default function NumberedList({
             <p className="text-lg font-light text-neutral-300">
               {item.description}
             </p>
-            {item.hrefText && (
+            {item.hrefText && item.href && (
               <Link href={item.href} className="link">
                 {item.hrefText}
               </Link>

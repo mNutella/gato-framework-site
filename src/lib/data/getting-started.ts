@@ -30,8 +30,6 @@ export const GET_INVOLVED = [
     id: 3,
     title: "Start Your Own GATO Group",
     description: `You can form your own local GATO group. Check out Chapter 14 "Building Your GATO Community" in the main GATO Framework for guidelines. Gather like-minded individuals and make a real-world impact. You can create local Meetup groups or online communities, such as on Discord, Reddit, and other social platforms.`,
-    hrefText: "",
-    href: "",
   },
   {
     id: 4,

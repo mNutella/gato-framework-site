@@ -50,7 +50,12 @@ export default function GettingStarted() {
         </div>
       </section>
 
-      <NumberedList title="Ways to Get Involved" items={GET_INVOLVED} />
+      <NumberedList
+        className="pt-16 md:pt-32"
+        title="Ways to Get Involved"
+        description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+        items={GET_INVOLVED}
+      />
 
       <ReadProposal />
 

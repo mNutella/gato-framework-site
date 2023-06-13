@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 type Item = {
   id: number;
   title: string;
   description: string;
-  href: string;
+  href?: string;
   image: string;
 };
 
@@ -14,16 +15,25 @@ export default function MainList({
   title,
   description,
   items,
+  id,
+  className,
 }: {
   title: string;
   description: string;
   items: Item[];
+  id?: string;
+  className?: string;
 }) {
   return (
-    <section className="flex flex-col gap-8 py-8 md:gap-16 md:pt-16 md:pb-0">
+    <section
+      id={id}
+      className={twMerge("flex flex-col gap-8 md:gap-16", className)}
+    >
       <div className="space-y-3">
         <h1 className="text-3xl md:text-6xl">{title}</h1>
-        <p className="text-lg font-light text-neutral-300 md:max-w-xl">{description}</p>
+        <p className="text-lg font-light text-neutral-300 md:max-w-xl">
+          {description}
+        </p>
       </div>
       <article className="relative">
         {items.map((item, index) => (
@@ -38,10 +48,14 @@ export default function MainList({
               )}
             >
               <h2 className="text-2xl md:text-3xl">{item.title}</h2>
-              <p className="text-lg font-light text-neutral-300">{item.description}</p>
-              <Link href={item.href} className="link">
-                Read more -&gt;
-              </Link>
+              <p className="text-lg font-light text-neutral-300">
+                {item.description}
+              </p>
+              {item.href && (
+                <Link href={item.href} className="link">
+                  Read more -&gt;
+                </Link>
+              )}
             </div>
             <div
               className={clsx(

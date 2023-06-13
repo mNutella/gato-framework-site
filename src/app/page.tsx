@@ -30,7 +30,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="flex md:w-1/2 relative order-1 md:order-2">
-            <div className="relative w-full h-[180px] md:h-full">
+            <div className="relative w-full h-[180px] md:min-h-[380px]">
               <Image
                 className="object-contain"
                 src="/images/home/main_section.png"
@@ -82,6 +82,7 @@ export default function Home() {
       <Community />
 
       <MainList
+        className="py-8 md:pt-16 md:pb-0"
         title="GATO Layers Overview"
         description="GATO is divided into seven layers to compartmentalize our efforts.
             Each layer is progressively broader in scope."
