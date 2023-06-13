@@ -15,6 +15,8 @@ export default function Nav({ items }: { items: NavGroup[] }) {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
   useEffect(() => {
+    handleScrollChange();
+
     addEventListener("scroll", handleScrollChange);
 
     return () => removeEventListener("scroll", handleScrollChange);
