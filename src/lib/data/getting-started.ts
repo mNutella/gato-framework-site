@@ -16,7 +16,7 @@ export const GET_INVOLVED = [
     description:
       "Kickstart your journey with GATO by downloading the Framework. Read it, share it, and implement it in your own way. As a decentralized movement, you don't need our permission. Your first step can be as simple as sharing our vision with your network.",
     hrefText: "Download ->",
-    href: "#",
+    href: "downloads",
   },
   {
     id: 2,
@@ -24,7 +24,8 @@ export const GET_INVOLVED = [
     description:
       "Ready to commit more? Consider applying to join the main GATO group. We review every application, but please be aware it takes time, and even if you're a valuable contributor, we might not have a fit for you in the main group yet. Stay tuned - public GATO groups are coming soon!",
     hrefText: "Join ->",
-    href: "#",
+    href: "https://xkbfhb6exp8.typeform.com/to/cX4aaS4I?typeform-source=admin.typeform.com",
+    linkProps: { target: "_blank" }
   },
   {
     id: 3,

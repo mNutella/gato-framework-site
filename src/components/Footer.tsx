@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-import { NavGroup } from "@/lib/types";
+import { NavGroup, NavItem } from "@/lib/types";
+
+function byOrder(itemA: NavItem, itemB: NavItem) {
+  return itemA.order - itemB.order;
+}
 
 export default function Footer({ items }: { items: NavGroup[] }) {
   return (
@@ -14,11 +18,12 @@ export default function Footer({ items }: { items: NavGroup[] }) {
             <div className="space-y-3">
               <h3 className="text-xl">{item.title}</h3>
               <ul>
-                {item.items.map((innerItem) => (
+                {item.items.sort(byOrder).map((innerItem) => (
                   <li key={"footer-item-" + innerItem.id}>
                     <Link
                       href={innerItem.href}
                       className="text-lg font-light text-neutral-300 transition-colors hover:text-neutral-500"
+                      {...innerItem.linkProps}
                     >
                       {innerItem.name}
                     </Link>

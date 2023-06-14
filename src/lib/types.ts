@@ -3,6 +3,8 @@ export type NavItem = {
   name: string;
   description: string;
   href: string;
+  linkProps: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  order: number;
 };
 
 export type NavGroup = {
@@ -10,5 +12,3 @@ export type NavGroup = {
   title: string;
   items: NavItem[];
 };
-
-

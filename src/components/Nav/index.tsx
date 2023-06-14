@@ -77,6 +77,7 @@ export default function Nav({ items }: { items: NavGroup[] }) {
             items={items}
             open={isMobileMenuOpen}
             onBurgerClick={() => setMobileMenuOpen((prev) => !prev)}
+            onItemClick={() => setMobileMenuOpen(false)}
           />
         )}
       </div>

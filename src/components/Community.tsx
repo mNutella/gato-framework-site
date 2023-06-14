@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { JOIN_HREF } from "@/lib/data/community";
+
 export default function Community() {
   return (
     <section className="flex flex-col relative gap-8 py-16 md:grid md:grid-cols-2 md:items-center md:gap-16 md:py-32">
@@ -11,14 +13,14 @@ export default function Community() {
           Discuss, build with, and meet thousands of GATOs from all around the
           world.
         </p>
-        <Link href="#" className="btn-primary">
-          Join Discord -&gt;
+        <Link href={JOIN_HREF} className="btn-primary" target="_blank">
+          Join -&gt;
         </Link>
       </div>
       <div className="space-y-3 relative md:col-auto">
         <div className="bg-neutral-900 border border-neutral-800 rounded-3xl flex flex-col sm:flex-row sm:items-center sm:justify-between p-8 z-0">
           <span className="text-xl md:text-2xl">Showcases</span>
-          <Link href="#" className="link">
+          <Link href="showcases" className="link">
             Explore -&gt;
           </Link>
         </div>

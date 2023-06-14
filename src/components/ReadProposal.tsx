@@ -18,7 +18,7 @@ export default function ReadProposal() {
         Explore our website to learn more about the GATO Framework, get
         involved, and contribute to the future of artificial intelligence.
       </p>
-      <Link href="#" className="btn-primary">
+      <Link href="downloads" className="btn-primary">
         Read Proposal
       </Link>
     </section>

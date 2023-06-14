@@ -8,6 +8,8 @@ import Community from "@/components/Community";
 import HorizontalList from "@/components/HorizontalList";
 import { NEWS, GLOBAL_COOPERATION, GATO_LAYERS } from "@/lib/data/home";
 
+// TODO: remove all flex and flex-col if grid exists and use just single column on mobile
+
 export default function Home() {
   return (
     <>
@@ -25,7 +27,7 @@ export default function Home() {
               multi-layered framework designed to facilitate global cooperation
               in addressing AI alignment and control challenges.
             </p>
-            <Link href="#" className="btn-primary">
+            <Link href="/#global-cooperation" className="btn-primary">
               Explore Framework
             </Link>
           </div>
@@ -75,6 +77,7 @@ export default function Home() {
       </section>
 
       <HorizontalList
+        id="global-cooperation"
         title="Global Cooperation on AI Safety"
         items={GLOBAL_COOPERATION}
       />

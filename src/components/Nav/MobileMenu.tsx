@@ -7,10 +7,12 @@ export default function MobileMenu({
   items,
   open,
   onBurgerClick,
+  onItemClick,
 }: {
   items: NavGroup[];
   open: boolean;
   onBurgerClick: () => void;
+  onItemClick: () => void;
 }) {
   return (
     <div>
@@ -48,6 +50,8 @@ export default function MobileMenu({
                       <Link
                         href={innerItem.href}
                         className="text-lg font-light text-neutral-300 transition-colors hover:text-neutral-500"
+                        onClick={onItemClick}
+                        {...innerItem.linkProps}
                       >
                         {innerItem.name}
                       </Link>

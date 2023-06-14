@@ -6,6 +6,7 @@ type Item = {
   title: string;
   description: string;
   hrefText?: string;
+  linkProps: React.AnchorHTMLAttributes<HTMLAnchorElement>;
   href?: string;
 };
 
@@ -49,7 +50,7 @@ export default function NumberedList({
               {item.description}
             </p>
             {item.hrefText && item.href && (
-              <Link href={item.href} className="link">
+              <Link href={item.href} className="link" {...item.linkProps}>
                 {item.hrefText}
               </Link>
             )}

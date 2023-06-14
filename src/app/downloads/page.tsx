@@ -12,7 +12,7 @@ export default function page() {
               {/* <span className="text-xl font-light text-neutral-400"> */}
               {/*   AI Coordination Strategy */}
               {/* </span> */}
-              <h1 className="text-3xl lg:text-6xl">Getting Started</h1>
+              <h1 className="text-3xl lg:text-6xl">Downloads</h1>
             </div>
             <p className="text-lg font-light text-neutral-300 lg:max-w-lg">
               Lorem ipsum dolor sit amet, qui minim labore adipisicing minim

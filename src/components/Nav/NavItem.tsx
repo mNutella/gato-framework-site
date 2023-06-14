@@ -23,7 +23,7 @@ export default function NavItem({
   const handleLeave = () => {
     timeOutRef.current = setTimeout(() => {
       setOpen(false);
-    }, 30);
+    }, 60);
   };
 
   return (
@@ -48,6 +48,8 @@ export default function NavItem({
               key={items[0].name}
               href={items[0].href}
               className="flex flex-col space-y-3 rounded-xl p-6 transition-colors bg-neutral-900 w-full max-w-[30%] hover:bg-neutral-700 focus:bg-neutral-700"
+              onClick={() => setOpen(false)}
+              {...items[0].linkProps}
             >
               <span className="text-xl font-light">{items[0].name}</span>
               <span className="text-sm font-light text-neutral-500">
@@ -60,6 +62,8 @@ export default function NavItem({
                   key={item.name}
                   href={item.href}
                   className="flex flex-col space-y-3 rounded-xl p-6 transition-colors hover:bg-neutral-700 focus:bg-neutral-700"
+                  onClick={() => setOpen(false)}
+                  {...item.linkProps}
                 >
                   <span className="text-xl font-light">{item.name}</span>
                   <span className="text-sm font-light text-neutral-500">

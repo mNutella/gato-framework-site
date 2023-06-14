@@ -14,13 +14,13 @@ export default function Contributing() {
           awesome new features, or help us squash bugs.
         </p>
         <div className="flex flex-col lg:flex-row gap-6">
-          <Link href="#" className="btn-primary">
-            More on contributing
-          </Link>
+          {/* <Link href="#" className="btn-primary"> */}
+          {/*   More on contributing */}
+          {/* </Link> */}
           <Link
             href="https://www.github.com"
             target="_blank"
-            className="btn-primary-outlined"
+            className="btn-primary"
           >
             Github -&gt;
           </Link>
