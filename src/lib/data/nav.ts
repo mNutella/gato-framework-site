@@ -17,7 +17,7 @@ export const NAV_ITEMS = [
         name: "Introduction",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        href: "#",
+        href: "/learn/introduction",
         order: 2,
       },
       {

@@ -10,10 +10,17 @@
   },
   "dependencies": {
     "clsx": "^1.2.1",
+    "contentlayer": "^0.3.3",
+    "date-fns": "^2.30.0",
     "next": "13.4.4",
+    "next-contentlayer": "^0.3.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-responsive": "^9.0.2",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-pretty-code": "^0.9.8",
+    "rehype-slug": "^5.1.0",
+    "remark-gfm": "^3.0.1",
     "tailwind-merge": "^1.13.1"
   },
   "devDependencies": {

@@ -36,3 +36,9 @@ next-env.d.ts
 
 # editor
 .null*
+
+# contentlayer
+.contentlayer
+
+# envs
+.env

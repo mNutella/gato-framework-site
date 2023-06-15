@@ -3,7 +3,7 @@ export type NavItem = {
   name: string;
   description: string;
   href: string;
-  linkProps: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  linkProps?: React.AnchorHTMLAttributes<HTMLAnchorElement>;
   order: number;
 };
 

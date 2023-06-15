@@ -24,3 +24,29 @@ body {
 .link {
   @apply md:text-lg text-blue-400 underline underline-offset-4 transition-all hover:underline-offset-8 hover:text-blue-300;
 }
+
+/* MDX styles */
+.prose .anchor {
+  @apply absolute invisible no-underline max-w-screen-md -ml-8 w-10/12 cursor-pointer;
+}
+
+.anchor:hover {
+  @apply visible;
+  transform: none !important;
+}
+
+.prose .anchor:after {
+  @apply text-neutral-600 content-['#'] text-4xl;
+}
+
+.prose *:hover > .anchor {
+  @apply visible;
+}
+
+.prose strong {
+  @apply font-semibold;
+}
+
+sup a {
+  @apply scroll-mt-32;
+}
