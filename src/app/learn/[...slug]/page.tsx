@@ -5,20 +5,21 @@ import { allLearningMaterials } from "contentlayer/generated";
 import { Mdx } from "@/components/Mdx";
 
 type MetadataParams = {
-  params: { slug: string };
+  params: { slug: string[] };
 };
 
 export async function generateStaticParams() {
   return allLearningMaterials.map((material) => ({
-    slug: material.slug,
+    slug: material.slug.split("/"),
   }));
 }
 
 export async function generateMetadata({
   params,
 }: MetadataParams): Promise<Metadata | undefined> {
+  const currentSlug = params.slug.join("/");
   const material = allLearningMaterials.find(
-    (material) => material.slug === params.slug
+    (material) => material.slug === currentSlug
   );
 
   if (!material) {
@@ -44,7 +45,7 @@ export async function generateMetadata({
       description,
       type: "article",
       publishedTime,
-      url: `https://${process.env.VERCEL_URL}/blog/${slug}`,
+      url: `https://${process.env.VERCEL_URL}/learn/${slug}`,
       images: [
         {
           url: ogImage,
@@ -54,9 +55,10 @@ export async function generateMetadata({
   };
 }
 
-export default function LearnPage({ params }: MetadataParams) {
+export default function LearnPage({ params }: any) {
+  const currentSlug = params.slug.join("/");
   const material = allLearningMaterials.find(
-    (material) => material.slug === params.slug
+    (material) => material.slug === currentSlug
   );
 
   if (!material) {
@@ -69,7 +71,7 @@ export default function LearnPage({ params }: MetadataParams) {
         {JSON.stringify(material.structuredData)}
       </script>
 
-      <section className="bg-neutral-900 border border-neutral-800 rounded-[32px]">
+      <section className="bg-neutral-900 border border-neutral-800 rounded-[32px] h-full lg:min-h-[350px]">
         <div className="flex flex-col gap-6 p-6 lg:p-16">
           <div className="space-y-6 flex flex-col justify-center">
             <div className="space-y-2">

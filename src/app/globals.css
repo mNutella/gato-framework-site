@@ -21,13 +21,17 @@ body {
   @apply btn-base text-neutral-200 border border-yellow-400 hover:bg-yellow-400 hover:border-transparent hover:text-neutral-950;
 }
 
+.base-link {
+  @apply text-blue-400 underline underline-offset-4 transition-all hover:underline-offset-8 hover:text-blue-300;
+}
+
 .link {
-  @apply md:text-lg text-blue-400 underline underline-offset-4 transition-all hover:underline-offset-8 hover:text-blue-300;
+  @apply base-link md:text-lg;
 }
 
 /* MDX styles */
 .prose .anchor {
-  @apply absolute invisible no-underline max-w-screen-md -ml-8 w-10/12 cursor-pointer;
+  @apply absolute invisible no-underline inset-0 cursor-pointer;
 }
 
 .anchor:hover {
@@ -36,7 +40,7 @@ body {
 }
 
 .prose .anchor:after {
-  @apply text-neutral-600 content-['#'] text-4xl;
+  @apply absolute text-neutral-600 content-['#'] text-4xl -left-8;
 }
 
 .prose *:hover > .anchor {
@@ -49,4 +53,26 @@ body {
 
 sup a {
   @apply scroll-mt-32;
+}
+
+.prose .content-link {
+  @apply base-link md:text-xl;
+}
+
+ul {
+  @apply mt-0 pt-0;
+}
+
+.prose ul li > ul,
+.prose ol li > ol,
+.prose ul li > ol,
+.prose ol li > ul {
+  @apply ml-6 md:ml-8 space-y-1;
+
+  & li {
+    @apply relative;
+    &:before {
+      @apply absolute text-neutral-600 content-['*'] text-3xl -left-6 top-auto bottom-auto;
+    }
+  }
 }

@@ -25,7 +25,7 @@ export const NAV_ITEMS = [
         name: "Literature",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        href: "#",
+        href: "/learn/literature/heuristic-imperatives",
         order: 5,
       },
       {
