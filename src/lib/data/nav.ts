@@ -13,15 +13,14 @@ export const NAV_ITEMS = [
         order: 1,
       },
       {
-        id: 3,
+        id: 2,
         name: "Introduction",
         description:
-          "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        href: "/learn/introduction",
+          "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.", href: "/learn/introduction",
         order: 2,
       },
       {
-        id: 5,
+        id: 3,
         name: "Literature",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
@@ -29,7 +28,7 @@ export const NAV_ITEMS = [
         order: 5,
       },
       {
-        id: 2,
+        id: 4,
         name: "Getting Started",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
@@ -37,7 +36,7 @@ export const NAV_ITEMS = [
         order: 3,
       },
       {
-        id: 6,
+        id: 5,
         name: "Learning Resources",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
@@ -45,7 +44,7 @@ export const NAV_ITEMS = [
         order: 6,
       },
       {
-        id: 4,
+        id: 6,
         name: "Traditions",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",

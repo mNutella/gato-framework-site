@@ -62,6 +62,7 @@ export default function NavItem({
                   key={item.name}
                   href={item.href}
                   className="flex flex-col space-y-3 rounded-xl p-6 transition-colors hover:bg-neutral-700 focus:bg-neutral-700"
+                  style={{ order: item.id }}
                   onClick={() => setOpen(false)}
                   {...item.linkProps}
                 >
