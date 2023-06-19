@@ -67,20 +67,20 @@ export const NAV_ITEMS = [
       },
       {
         id: 2,
-        name: "Ecosystem",
-        description:
-          "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-        href: "#",
-        order: 2,
-      },
-      {
-        id: 3,
         name: "Showcases",
         description:
           "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
         href: "showcases",
         order: 3,
       },
+      // {
+      //   id: 3,
+      //   name: "Ecosystem",
+      //   description:
+      //     "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+      //   href: "#",
+      //   order: 2,
+      // },
       {
         id: 4,
         name: "Blog",
@@ -104,30 +104,30 @@ export const NAV_ITEMS = [
         linkProps: { target: "_blank"},
         order: 1,
       },
-      {
-        id: 2,
-        name: "Discords and more",
-        description:
-          "Join local and global groups on Discord, Telegram, Kakao and more.",
-        href: "#",
-        order: 2,
-      },
+      // {
+      //   id: 2,
+      //   name: "Discords and more",
+      //   description:
+      //     "Join local and global groups on Discord, Telegram, Kakao and more.",
+      //   href: "#",
+      //   order: 2,
+      // },
       {
         id: 3,
         name: "Working Groups",
         description:
-          "Groups working on key workstreams in the Stacks Ecosystem",
+          "Groups working on key workstreams in the GATOs Ecosystem",
         href: "#",
         order: 3,
       },
-      {
-        id: 4,
-        name: "Events",
-        description:
-          "Find community at upcoming conferences, virtual events, and more",
-        href: "#",
-        order: 4,
-      },
+      // {
+      //   id: 4,
+      //   name: "Events",
+      //   description:
+      //     "Find community at upcoming conferences, virtual events, and more",
+      //   href: "#",
+      //   order: 4,
+      // },
     ],
   },
 ];
