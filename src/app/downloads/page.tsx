@@ -6,7 +6,7 @@ export default function page() {
   return (
     <>
       <section className="bg-neutral-900 border border-neutral-800 rounded-[32px]">
-        <div className="flex flex-col gap-6 p-6 lg:grid lg:grid-cols-2 lg:p-16">
+        <div className="grid gap-6 p-6 lg:grid-cols-2 lg:p-16">
           <div className="space-y-6 flex flex-col justify-center">
             <div className="space-y-2">
               {/* <span className="text-xl font-light text-neutral-400"> */}

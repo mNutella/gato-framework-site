@@ -14,8 +14,8 @@ export default function Home() {
   return (
     <>
       <section className="bg-neutral-900 border border-neutral-800 rounded-[32px]">
-        <div className="flex flex-col md:flex-row p-6 md:p-16 space-y-6 space-y-reverse md:space-y-0 md:space-x-6">
-          <div className="space-y-6 flex flex-col justify-center md:w-1/2 order-2 md:order-1">
+        <div className="grid gap-6 p-6 md:grid-cols-2 md:p-16">
+          <div className="space-y-6 flex flex-col justify-center order-2 md:order-1">
             <div className="space-y-2">
               <span className="text-xl font-light text-neutral-400">
                 AI Coordination Strategy
@@ -31,7 +31,7 @@ export default function Home() {
               Explore Framework
             </Link>
           </div>
-          <div className="flex md:w-1/2 relative order-1 md:order-2">
+          <div className="flex relative order-1 md:order-2">
             <div className="relative w-full h-[180px] md:min-h-[380px]">
               <Image
                 className="object-contain"

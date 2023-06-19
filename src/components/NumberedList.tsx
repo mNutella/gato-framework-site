@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link, { LinkProps } from "next/link";
 import { twMerge } from "tailwind-merge";
 
 type Item = {
@@ -6,7 +6,11 @@ type Item = {
   title: string;
   description: string;
   hrefText?: string;
-  linkProps: React.AnchorHTMLAttributes<HTMLAnchorElement>;
+  linkProps?: Omit<
+    React.AnchorHTMLAttributes<HTMLAnchorElement>,
+    keyof LinkProps
+  > &
+  Omit<LinkProps, "href">;
   href?: string;
 };
 
@@ -50,7 +54,7 @@ export default function NumberedList({
               {item.description}
             </p>
             {item.hrefText && item.href && (
-              <Link href={item.href} className="link" {...item.linkProps}>
+              <Link href={item.href} className="link" {...item?.linkProps}>
                 {item.hrefText}
               </Link>
             )}

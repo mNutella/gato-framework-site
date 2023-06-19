@@ -9,7 +9,7 @@ export default function GettingStarted() {
   return (
     <>
       <section className="bg-neutral-900 border border-neutral-800 rounded-[32px]">
-        <div className="flex flex-col gap-6 p-6 lg:grid lg:grid-cols-2 lg:p-16">
+        <div className="grid gap-6 p-6 order-1 lg:grid-cols-2 lg:p-16 lg:order-2">
           <div className="space-y-6 flex flex-col justify-center">
             <div className="space-y-2">
               {/* <span className="text-xl font-light text-neutral-400"> */}
@@ -25,7 +25,7 @@ export default function GettingStarted() {
               Get Involved
             </Link>
           </div>
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-6 order-1 lg:order-2">
             <div className="p-6 bg-neutral-800 rounded-3xl border border-neutral-700 ">
               <p className="text-lg font-light text-neutral-300">
                 We understand that the GATO Framework is a huge, as is the
