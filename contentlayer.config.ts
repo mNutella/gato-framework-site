@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files";
+import { ComputedFields, defineDocumentType, makeSource } from "contentlayer/source-files";
 import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeSlug from "rehype-slug";
@@ -8,17 +8,16 @@ function onlyFileName(str: string) {
   return str.slice(str.indexOf("/") + 1);
 }
 
-/** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+const computedFields: ComputedFields = {
   slug: {
     type: "string",
     resolve: (doc: any) => onlyFileName(doc._raw.flattenedPath),
   },
   structuredData: {
-    type: "object",
+    type: "reference",
     resolve: (doc: any) => ({
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
+      "@type": "reference",
       headline: doc.title,
       datePublished: doc.publishedAt,
       dateModified: doc.publishedAt,
