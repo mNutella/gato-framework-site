@@ -120,14 +120,14 @@ export const NAV_ITEMS = [
         href: "#",
         order: 3,
       },
-      // {
-      //   id: 4,
-      //   name: "Events",
-      //   description:
-      //     "Find community at upcoming conferences, virtual events, and more",
-      //   href: "#",
-      //   order: 4,
-      // },
+      {
+        id: 4,
+        name: "Events",
+        description:
+          "Find community at upcoming conferences, virtual events, and more",
+        href: "#",
+        order: 4,
+      },
     ],
   },
 ];
