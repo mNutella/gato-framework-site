@@ -5,6 +5,11 @@ import Community from "@/components/Community";
 import { SHOWCASES } from "@/lib/data/showcases";
 import Contributing from "@/components/Contributing";
 
+export const metadata = {
+  title: "GATO Community Showcase",
+  description: "",
+};
+
 export default function Showcases() {
   return (
     <>
@@ -52,11 +57,13 @@ export default function Showcases() {
             cillum sint consectetur cupidatat.
           </p>
         </div>
-        <article className="relative flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-6">
+        <div className="relative flex flex-col gap-3 lg:grid lg:grid-cols-2 lg:gap-6">
           {SHOWCASES.map((item) => (
-            <article
+            <Link
               key={"sc-" + item.id}
-              className="flex flex-col bg-neutral-900 border border-neutral-800 rounded-3xl space-y-6 p-6 "
+              href={item.href ?? "/showcases#"}
+              target="_blank"
+              className="flex flex-col bg-neutral-900 border border-neutral-800 rounded-3xl space-y-6 p-6 transition-colors hover:border-neutral-600"
             >
               <div className="flex flex-col items-center space-y-3">
                 <Image
@@ -74,9 +81,9 @@ export default function Showcases() {
               <p className="text-lg font-light text-neutral-300">
                 {item.description}
               </p>
-            </article>
+            </Link>
           ))}
-        </article>
+        </div>
       </section>
 
       <Community />
