@@ -5,6 +5,12 @@ import ReadProposal from "@/components/ReadProposal";
 import NumberedList from "@/components/NumberedList";
 import { PERSONS, GET_INVOLVED } from "@/lib/data/getting-started";
 
+export const metadata = {
+  title: "Getting Started With GATO",
+  description:
+    "Welcome to GATO, a global, decentralized movement to advance the principles of axiomatic alignment in AI. There's no requirement for a tech background - we welcome communicators, teachers, educators, academics, politicians, lawyers, artists, and all who believe in our mission.",
+};
+
 export default function GettingStarted() {
   return (
     <>

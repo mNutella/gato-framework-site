@@ -8,6 +8,12 @@ import NumberedList from "@/components/NumberedList";
 
 import { GUIDING_TRADITIONS, MAIN_STEPS } from "@/lib/data/traditions";
 
+export const metadata = {
+  title: "GATO Traditions",
+  description:
+    "Traditions serve as the guiding principles, the code of conduct that binds us all in our shared mission. They shape our interactions, inform our strategies, and steer our collective actions towards our common goal: the alignment of AI with our fundamental axioms.",
+};
+
 export default function Traditions() {
   return (
     <>

@@ -2,6 +2,11 @@ import Link from "next/link";
 
 import { DOWNLOADS } from "@/lib/data/downloads";
 
+export const metadata = {
+  title: "Download The GATO Framework",
+  description: "",
+};
+
 export default function page() {
   return (
     <>
