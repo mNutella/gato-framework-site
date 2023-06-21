@@ -18,7 +18,7 @@ export default function Contributing() {
           {/*   More on contributing */}
           {/* </Link> */}
           <Link
-            href="https://www.github.com"
+            href="https://github.com/mNutella/gato-framework-site"
             target="_blank"
             className="btn-primary"
           >

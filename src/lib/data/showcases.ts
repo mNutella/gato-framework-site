@@ -10,6 +10,7 @@ export const SHOWCASES = [
     title: "ETHOS - Ethical Modular Agent Alignment API",
     description:
       "A modular framework and API to align autonomous agents with ethical principles, ensuring trustworthy and safe AI applications.",
+    href: "https://lablab.ai/event/autonomous-gpt-agents-hackathon/cogark/ethos",
     image: "/images/showcases/showcase_ethos.png",
   },
 ];
